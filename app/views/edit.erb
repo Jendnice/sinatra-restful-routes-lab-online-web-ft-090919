@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <body>
   Edit your recipe:
-  <form action= '/recipes/<%=@recipe.id%>' method= "post">
+  <form action= '/recipes/<%= @recipe.id %>' method= "post">
   <input id= "hidden" type= "hidden" name="_method" value= "patch">
     Current Recipe:
     <%=@recipe.name%>
