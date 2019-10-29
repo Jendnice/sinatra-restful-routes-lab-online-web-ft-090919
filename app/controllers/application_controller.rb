@@ -6,6 +6,7 @@ class ApplicationController < Sinatra::Base
 
   get '/recipes' do 
     @recipes = Recipe.all
+    binding.pry 
 
     erb :index 
   end 
@@ -40,7 +41,7 @@ class ApplicationController < Sinatra::Base
     @recipe.ingredients = params[:ingredients]
     @recipe.cook_time = params[:cook_time]
     @recipe.save 
-   
+    
     redirect to "/recipes/#{@recipe.id}"
   end 
   
